@@ -1,0 +1,11 @@
+.card {
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
+}
+
+.callout {
+  background-color: rgb(240, 240, 240);
+}
+
+i {
+  color: white;
+}
