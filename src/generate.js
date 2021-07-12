@@ -1,4 +1,4 @@
-function pageTemplate(teamCards) {
+const pageTemplate = function(teamCards) {
     return `
     <!DOCTYPE html>
 <html lang="en">
@@ -90,23 +90,24 @@ const internCard = function(intern) {
     `
 };
 
-generatePage = (data) => {
+generatePage = (teamArray) => {
     cards = [];
-    for(let i=0; i < data.length; i++) {
-        const teamPosition =data[i].getRole();
+    for(let i=0; i < teamArray.length; i++) {
+        const person = teamArray[i];
+        const teamPosition =person.getRole();
 
         if(teamPosition === 'Manager') {
-            const generateManager = managerCard(data[i]);
+            const generateManager = managerCard(person);
             cards.push(generateManager);
         }
 
         if(teamPosition === 'Engineer') {
-            const generateEngineer = engineerCard(data[i]);
+            const generateEngineer = engineerCard(person);
             cards.push(generateEngineer);
         }
 
         if(teamPosition === 'Intern') {
-            const generateIntern = internCard(data[i]);
+            const generateIntern = internCard(person);
             cards.push(generateIntern);
         }
     };

@@ -8,7 +8,7 @@ describe("Manager", () => {
             expect(manager1.name).toBe('Michael');
             expect(manager1.id).toBe(4);
             expect(manager1.email).toBe('mscott@dundermifflin.com');
-            expect(manager1.github).toBe(1);
+            expect(manager1.officeNumber).toBe(1);
         });
     });
 

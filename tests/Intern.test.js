@@ -8,7 +8,7 @@ describe("Intern", () => {
             expect(intern1.name).toBe('Plop');
             expect(intern1.id).toBe(444);
             expect(intern1.email).toBe('pete@dundermifflin.com');
-            expect(intern1.github).toBe('Penn State');
+            expect(intern1.school).toBe('Penn State');
         });
     });
 
