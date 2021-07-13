@@ -1,4 +1,4 @@
-# README Generator
+# Team Profile Generator
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -21,7 +21,7 @@
 
 If package.json file is present then type the command: `npm install`
 
-_If no package.json file is present, type the command:_ `npm init -y` _,then:_ `npm install inquirer jest`
+_If no package.json file is present, type the command:_ `npm init -y` _then:_ `npm install inquirer jest`
 
 **Below is video demonstrating the My Team page generation process:**
 
@@ -81,6 +81,6 @@ SOFTWARE.
 
 ## Features
 
-- prompts will ask questions to help gcreate each emplyee profile
-- File will be generated/ overwritten if one already exists in dist/ folder
+- prompts will ask questions to help create each emplyee profile
+- File will be overwritten if one already exists in dist/ folder
 - Links to github and email will be present (if email address and github profile name are vaild)
