@@ -6,7 +6,7 @@
 
 - User can generate an html document that display team profiles
 - User can add as many employees as they wish through console prompts
-- HTML document will be overwritten every time user run the program in the console
+- HTML document will be overwritten every time user runs the program in the console
 
 ## Table of Contents
 
@@ -17,19 +17,21 @@
 
 ## Installation
 
-Open console:
+**Open console:**
 
 If package.json file is present then type the command: `npm install`
 
-_If no package.json file is present, type the command: `npm init` ,then: `npm install inquirer jest`_
+_If no package.json file is present, type the command:_ `npm init -y` _,then:_ `npm install inquirer jest`
 
-Below is video demonstrating the My Team page generation process:
+**Below is video demonstrating the My Team page generation process:**
 
 https://drive.google.com/file/d/1So6z9Bp1IOuUdjggpfcx4K12_cwNZtpi/view?usp=sharing
 
 ## Usage
 
-Once installation is complete run: `npm start` or `node index.js`
+**Once installation is complete run:**
+
+`npm start` or `node index.js`
 
 ![Screenshot of prompt entries and example of card in html document](./img/html_prompt&card.png)
 
