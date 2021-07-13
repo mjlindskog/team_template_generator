@@ -13,7 +13,7 @@ describe("Engineer", () => {
         });
     });
 
-    // check to see if 
+    // check to see if Github function is working
     describe('getGithub', () => {
         it('return the github input', () => {
             const engineer2 = new Engineer('Guy', 70, 'guy@employment.com', 'guysgithub')

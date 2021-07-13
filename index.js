@@ -1,11 +1,10 @@
 const Employee = require('./lib/employee');
 const Engineer = require('./lib/engineer');
-const Mananger = require('./lib/manager');
+const Manager = require('./lib/manager');
 const Intern = require('./lib/intern');
 const generatePage = require('./src/generate');
 const inquirer = require('inquirer');
 const fs = require('fs');
-const Manager = require('./lib/manager');
 
 const createFile = data => {
     const filename = './dist/index.html';
