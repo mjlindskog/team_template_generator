@@ -2,6 +2,7 @@ const { it, expect, describe } = require('@jest/globals');
 const Intern = require('../lib/intern');
 
 describe("Intern", () => {
+    // tests the employee object with intern additions
     describe("internObject", () => {
         it("should create the intern object with school included", () => {
             const intern1 = new Intern('Plop', 444, 'pete@dundermifflin.com', 'Penn State');
@@ -12,6 +13,7 @@ describe("Intern", () => {
         });
     });
 
+    // check to see if School function is working
     describe('getSchool', () => {
         it('return the school input', () => {
             const intern2 = new Intern('Clark', 445, 'clark@dundermifflin.com', 'University of Pittsburgh')
@@ -19,6 +21,7 @@ describe("Intern", () => {
         });
     });
 
+    // tests that get role produces Intern
     describe('getRole', () => {
         it('return the "Intern"', () => {
             const intern3 = new Intern('Ryan', 333, 'ryan@dundermifflin.com', 'Business School')

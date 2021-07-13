@@ -1,3 +1,4 @@
+// basic page tmeplate with container ready for generated cards to be inserted
 const pageTemplate = function(teamCards) {
     return `
     <!DOCTYPE html>
@@ -36,6 +37,7 @@ const pageTemplate = function(teamCards) {
     `
 };
 
+// card created if the manager choice is made
 const managerCard = function(manager) {
     return `
     <div class="card col-3 mt-3 mx-2">
@@ -54,6 +56,7 @@ const managerCard = function(manager) {
     `
 };
 
+// card created if the engineer choice is made
 const engineerCard = function(engineer) {
     return `
     <div class="card col-3 mt-3 mx-2">
@@ -72,6 +75,7 @@ const engineerCard = function(engineer) {
     `
 };
 
+// card created if the intern choice is made
 const internCard = function(intern) {
     return `
     <div class="card col-3 mt-3 mx-2">
@@ -91,27 +95,29 @@ const internCard = function(intern) {
 };
 
 generatePage = (teamArray) => {
+    // blank array for all different cards to be joined into
     cards = [];
     for(let i=0; i < teamArray.length; i++) {
-        const person = teamArray[i];
-        const teamPosition =person.getRole();
+        
+        const teamPosition =teamArray[i].getRole();
 
         if(teamPosition === 'Manager') {
-            const generateManager = managerCard(person);
-            cards.push(generateManager);
+            //contents in the manager card will be matched with the user inputs and put in the cards array
+            cards.push(managerCard(teamArray[i]));
         }
 
         if(teamPosition === 'Engineer') {
-            const generateEngineer = engineerCard(person);
-            cards.push(generateEngineer);
+            //contents in the engineer card will be matched with the user inputs and put in the cards array
+            cards.push(engineerCard(teamArray[i]));
         }
 
         if(teamPosition === 'Intern') {
-            const generateIntern = internCard(person);
-            cards.push(generateIntern);
+            //contents in the engineer card will be matched with the user inputs and put in the cards array
+            cards.push(internCard(teamArray[i]));
         }
     };
 
+    // all cards created will be able to be inserted into the template
     const teamCards = cards.join('')
 
     const createPage = pageTemplate(teamCards);

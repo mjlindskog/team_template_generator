@@ -2,6 +2,7 @@ const { it, expect, describe } = require('@jest/globals');
 const Manager = require('../lib/manager');
 
 describe("Manager", () => {
+    // tests the employee object with manager additions
     describe("managerObject", () => {
         it("should create the manager object with office number included", () => {
             const manager1 = new Manager('Michael', 4, 'mscott@dundermifflin.com', 1);
@@ -12,6 +13,7 @@ describe("Manager", () => {
         });
     });
 
+    // check to see if office number function is working
     describe('getOfficenumber', () => {
         it('return the office number input', () => {
             const manager2 = new Manager('Date Mike', 4, 'datemike@dundermifflin.com', 1)
@@ -19,6 +21,7 @@ describe("Manager", () => {
         });
     });
 
+    // tests that get role produces Manager
     describe('getRole', () => {
         it('return the "Manager"', () => {
             const manager3 = new Manager('Prison Mike', 4, 'prisonmike@dundermifflin.com', 1)

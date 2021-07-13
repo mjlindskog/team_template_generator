@@ -11,6 +11,7 @@ const createFile = data => {
     const filename = './dist/index.html';
 
     fs.writeFile(filename, data, err => {
+        // either or statement for whatever error encoutered or succesfully genereates html file
         err ? console.log(err) : console.log('Success! check the dist/ folder for the index.html')
     }) 
 };
@@ -19,6 +20,7 @@ const teamArray = [];
 
 function questions() {
     return inquirer
+        // questions all users will be asked each time card is created
         .prompt([
             {
                 type: 'list',
@@ -43,6 +45,7 @@ function questions() {
             },
         ])
         .then(({name, id, email, role}) => {
+            // splits out by role selected to prompt either ask office number, github usernmane, or school questions
             if(role === 'Manager') {
                 return inquirer
                     .prompt([
@@ -107,12 +110,13 @@ function questions() {
         })
 };
 
+// initiates the questions prompt when npm start or node index.js is typed in command line
 questions()
     .then(teamCards => {
         return generatePage(teamArray)
     })
-    .then(pageHTML => {
-        return createFile(pageHTML)
+    .then(newPage => {
+        return createFile(newPage)
     })
     .catch(err => {
         console.log(err);
